@@ -1,15 +1,10 @@
 $(document).ready(function() {
      
   $('.fahrenheit').show();
-  $('.celcius').hide();
   $("#todayF").show();
   $("#tomorrowF").show();
   $("#afterTomorrowF").show();
   $("#afterAfterTomorrowF").show();
-  $("#todayC").hide();
-  $("#tomorrowC").hide();
-  $("#afterTomorrowC").hide();
-  $("#afterAfterTomorrowC").hide();
   var latitude;
   var longitude;
 
@@ -111,36 +106,19 @@ $(document).ready(function() {
 
         //temp toggle 
         $(".fahrenheit-btn").on("click", function() {
-          $(".celsius").hide();
-          $("#todayC").hide();
-          $("#tomorrowC").hide();
-          $("#afterTomorrowC").hide();
-          $("#afterAfterTomorrowC").hide();
           $(".fahrenheit").show(fahrenheit);
           $("#todayF").show();
           $("#tomorrowF").show();
           $("#afterTomorrowF").show();
           $("#afterAfterTomorrowF").show();
         });
-        $(".celsius-btn").on("click", function() {
-          $(".fahrenheit").hide();
-          $("#todayF").hide();
-          $("#tomorrowF").hide();
-          $("#afterTomorrowF").hide();
-          $("#afterAfterTomorrowF").hide();
-          $(".celsius").show(celsius);
-          $("#todayC").show();
-          $("#tomorrowC").show();
-          $("#afterTomorrowC").show();
-          $("#afterAfterTomorrowC").show();
-        });
-
+      
         //  end of temp toggle  
       });
 
     });
   } else {
-    alert("We couldn` retrieve your location, please check your location settings");
+    alert("We couldn`t get your location, please check your location settings");
   };
 
  
